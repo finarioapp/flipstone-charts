@@ -42,6 +42,9 @@ var flipstoneCharts = {
     var options = flipstoneCharts.optionsForElement(table, optionsElement);
     table.hide();
     flipstoneCharts.drawChart(table, options);
+
+    // dynamically loaded content will cause charts to re-render
+    table.removeClass('flipstone-chart');
   },
 
   drawChart: function(table, options) {
